@@ -7,7 +7,6 @@ set backupdir=~/tmp,/tmp
 set undodir=~/tmp,/tmp
 "set viminfo+=~/tmp,/tmp
 
-
 set number
 
 set expandtab
@@ -15,9 +14,21 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-set runtimepath+=~/.vim/repos/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-call dein#begin(expand('~/.vim/dein'))
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
+
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+
+  call dein#end()
+  call dein#save_state()
+endif
 
 call dein#add('Shougo/dein.vim')
 call dein#add('altercation/vim-colors-solarized')
