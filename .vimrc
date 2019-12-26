@@ -16,25 +16,15 @@ set softtabstop=4
 
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
+call dein#begin('~/.cache/dein')
+call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+call dein#add('Shougo/deoplete.nvim')
 
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-
-  call dein#end()
-  call dein#save_state()
-endif
-
-call dein#add('Shougo/dein.vim')
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('vim-ruby/vim-ruby')
 call dein#add('fuenor/im_control.vim')
 call dein#add('junegunn/vim-easy-align')
+call dein#add('Glench/Vim-Jinja2-Syntax')
 
 "call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 "call dein#add('Shougo/neocomplete.vim')
@@ -42,6 +32,7 @@ call dein#add('junegunn/vim-easy-align')
 "call dein#add('Shougo/neosnippet')
 
 call dein#end()
+call dein#save_state()
 
 let g:solarized_termcolors=256
 
