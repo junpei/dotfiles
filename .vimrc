@@ -25,6 +25,7 @@ call dein#add('vim-ruby/vim-ruby')
 call dein#add('fuenor/im_control.vim')
 call dein#add('junegunn/vim-easy-align')
 call dein#add('Glench/Vim-Jinja2-Syntax')
+call dein#add('leafgarland/typescript-vim')
 
 "call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 "call dein#add('Shougo/neocomplete.vim')
