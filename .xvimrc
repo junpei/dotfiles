@@ -1,0 +1,5 @@
+map  <C-[> <Esc>
+nmap <C-[> <Esc>
+vmap <C-[> <Esc>
+imap <C-[> <Esc>
+omap <C-[> <Esc>
